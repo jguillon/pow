@@ -1,0 +1,64 @@
+[{
+    "id": "t01",
+    "pairs": [
+        ["épingle", "accroc"],
+        ["cinéma", "acteur"],
+        ["punition", "adolescant"]
+    ]
+}, {
+    "id": "t02",
+    "pairs": [
+        ["puce", "bouton"],
+        ["poing", "boxe"],
+        ["science", "brvet"]
+    ]
+}, {
+    "id": "t03",
+    "pairs": [
+        ["souris", "touche"],
+        ["virage", "tournant"],
+        ["pendule", "turnesol"]
+    ]
+}, {
+    "id": "t04",
+    "pairs": [
+        ["ventre", "estomac"],
+        ["niveau", "étage"],
+        ["cycle", "evolution"]
+    ]
+}, {
+    "id": "t05",
+    "pairs": [
+        ["palmier", "île"],
+        ["vidéo", "image"],
+        ["urbain", "imeuble"]
+    ]
+}, {
+    "id": "t06",
+    "pairs": [
+        ["laine", "mouton"],
+        ["jambe", "mouvement"],
+        ["médiane", "moyene"]
+    ]
+}, {
+    "id": "t07",
+    "pairs": [
+        ["serrure", "porte"],
+        ["profil", "potrait"],
+        ["crayon", "pot"]
+    ]
+}, {
+    "id": "t08",
+    "pairs": [
+        ["guerre", "journal"],
+        ["agent", "jornaliste"],
+        ["arbitre", "juge"]
+    ]
+}, {
+    "id": "t09",
+    "pairs": [
+        ["pente", "colline"],
+        ["étiquette", "colorant"],
+        ["tiroir", "comode"]
+    ]
+}]

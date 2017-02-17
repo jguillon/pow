@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "PoW",
+    "version": "0.1.4",
+    "minimum_chrome_version": "23",
+    "description": "Pairs of Words memory test.",
+    "offline_enabled": true,
+    "icons": {
+        "16": "assets/icons/pow-icon16.png",
+        "36": "assets/icons/pow-icon36.png",
+        "48": "assets/icons/pow-icon48.png",
+        "57": "assets/icons/pow-icon57.png",
+        "72": "assets/icons/pow-icon72.png",
+        "96": "assets/icons/pow-icon96.png",
+        "114": "assets/icons/pow-icon114.png",
+        "128": "assets/icons/pow-icon128.png",
+        "144": "assets/icons/pow-icon144.png"
+    },
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "permissions": [
+        "storage",
+        {"fileSystem": ["write", "retainEntries", "directory"]}
+    ]
+}
