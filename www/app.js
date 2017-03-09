@@ -455,7 +455,11 @@ POW.Application.prototype.keyDownListener = function(event) {
                 that.participant.sessions.push(that.session);
                 console.log(that.participant);
                 that.participant.save(function() {
-                    window.close();
+                    if (chrome.runtime.lastError) {
+                        console.error(chrome.runtime.lastError);
+                    } else {
+                        window.close();
+                    }
                 });
                 break;
             default:
