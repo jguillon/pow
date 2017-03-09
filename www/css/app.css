@@ -15,13 +15,19 @@ form#login-form button{
     margin-bottom: 10vh;
 }
 
-#admin div.row div {
+#admin div#participants-info div {
     max-height: 170px;
     overflow-y: auto;
 }
 
 #admin #list-col {
     line-height: 170px;
+}
+
+#admin div#menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 #message-box {

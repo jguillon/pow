@@ -1,7 +1,10 @@
 var POW = POW || {};
 
-POW.AdminView = function(exportCallback) {
-    this.export = exportCallback;
+POW.AdminView = function(adminController) {
+    console.log(adminController);
+    this.export = adminController.exportAs;
+    this.save = adminController.saveAs;
+    this.open = adminController.open;
 };
 
 POW.AdminView.FILENAME = 'admin.html';
@@ -14,6 +17,8 @@ POW.AdminView.prototype.load = function(callback) {
             console.error("Page '" + POW.AdminView.FILENAME + "' could not load!");
         } else if (status == "success") {
             $('#export').click(that.export);
+            $('#save').click(that.save);
+            $('#open').click(that.open);
             callback();
         }
     });

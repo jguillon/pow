@@ -4,8 +4,15 @@ POW.AdminModel = function() {
 
 };
 
-POW.AdminModel.prototype.getExportationFileContent = function(callback) {
-    this.getExportationFileData(function(csvData){
+POW.AdminModel.getBackupFileContent = function(callback) {
+    chrome.storage.local.get('participants', function(data) {
+        console.log(JSON.stringify(data));
+        callback(JSON.stringify(data));
+    });
+};
+
+POW.AdminModel.getExportationFileContent = function(callback) {
+    POW.AdminModel.getExportationFileData(function(csvData){
         var csvContentArray = [];
         csvData.forEach(function(csvRowData, i) {
             var csvRowString = '"' + csvRowData.join('";"') + '"';
@@ -18,7 +25,7 @@ POW.AdminModel.prototype.getExportationFileContent = function(callback) {
 };
 
 
-POW.AdminModel.prototype.getExportationFileData = function(callback) {
+POW.AdminModel.getExportationFileData = function(callback) {
     chrome.storage.local.get('participants', function(data) {
         var csvData = [];
         var csvHeader = ['participant','liste','condition','date','heure','score'];

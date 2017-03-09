@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "PoW",
-    "version": "0.1.4",
+    "version": "0.2.0",
     "minimum_chrome_version": "23",
     "description": "Pairs of Words memory test.",
     "offline_enabled": true,
