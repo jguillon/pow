@@ -333,7 +333,7 @@ POW.Task = function(id) {
     this.pairs = []; // Array of pairs (Array of Array of length 2)
 }
 
-POW.Task.DB_PATH = 'assets/tasks.json';
+POW.Task.DB_PATH = 'assets/tasks.debug.json';
 
 POW.Task.prototype.load = function(callback) {
     var that = this;
@@ -423,6 +423,21 @@ POW.Application.prototype.loadDictionary = function(callback) {
     });
 };
 
+POW.Application.prototype.save = function() {
+    var that = this;
+    that.participant.save(function() {
+        if (chrome.runtime.lastError) {
+            console.error(chrome.runtime.lastError);
+            that.controllers['test'].displaySaveError(function(){
+                that.save();
+            });
+        } else {
+            window.close();
+            // console.log('I close !');
+        }
+    });
+};
+
 POW.Application.prototype.keyDownListener = function(event) {
     var that = POW.app;
     console.log('key down');
@@ -454,13 +469,7 @@ POW.Application.prototype.keyDownListener = function(event) {
                 }
                 that.participant.sessions.push(that.session);
                 console.log(that.participant);
-                that.participant.save(function() {
-                    if (chrome.runtime.lastError) {
-                        console.error(chrome.runtime.lastError);
-                    } else {
-                        window.close();
-                    }
-                });
+                that.save();
                 break;
             default:
                 console.log('nothing to do');

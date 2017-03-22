@@ -21,6 +21,14 @@ POW.TestView.prototype.hideMessage = function(callback) {
     $('#message-box').fadeOut(400, callback);
 };
 
+POW.TestView.prototype.showModal = function(title, message, confirm, callback) {
+    $("#test-modal-title").html(title);
+    $("#test-modal-body").html(message);
+    $("#test-modal-confirm").html(confirm);
+    $("#test-modal-confirm").on('click', callback);
+    $("#test-modal").modal('show');
+};
+
 POW.TestView.prototype.showMessage = function(message, callback) {
     $('#word1').hide();
     $('#proposal').hide();

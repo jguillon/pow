@@ -40,6 +40,10 @@ POW.TestController.prototype.displayOneRandomWord = function() {
     POW.app.state = 'waiting-for-answer';
 };
 
+POW.TestController.prototype.displaySaveError = function(callback) {
+    this.view.showModal("Erreur", "Oups...! La sauvegarde automatique ne s'est pas passée comme prévue. Voulez-vous réessayer ?", "Réessayer", callback);
+};
+
 POW.TestController.prototype.checkAnswer = function() {
     var prop = this.view.getProposal();
     var newIPair = POW.app.session.pairsOrder[this.iPair];
