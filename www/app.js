@@ -333,7 +333,8 @@ POW.Task = function(id) {
     this.pairs = []; // Array of pairs (Array of Array of length 2)
 }
 
-POW.Task.DB_PATH = 'assets/tasks.debug.json';
+POW.Task.DB_PATH = 'assets/tasks.json';
+// POW.Task.DB_PATH = 'assets/tasks.debug.json';
 
 POW.Task.prototype.load = function(callback) {
     var that = this;
@@ -468,6 +469,7 @@ POW.Application.prototype.keyDownListener = function(event) {
                     that.participant.sessions = new Array();
                 }
                 that.participant.sessions.push(that.session);
+                that.state = 'waiting-for-saving';
                 console.log(that.participant);
                 that.save();
                 break;
