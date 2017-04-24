@@ -1,7 +1,8 @@
 {
     "manifest_version": 2,
     "name": "PoW",
-    "version": "0.2.0",
+    "version": "0.3.0",
+    "update_url": "http://pow-updater.azurewebsites.net/",
     "minimum_chrome_version": "23",
     "description": "Pairs of Words memory test.",
     "offline_enabled": true,
